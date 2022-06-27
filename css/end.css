@@ -1,0 +1,129 @@
+/* Police d'écriture */
+
+@import url("https://fonts.cdnfonts.com/css/breathe-fire");
+
+#breathe_fire {
+  font-family: "Breathe Fire", sans-serif;
+  margin: 0;
+}
+
+/* Settings de base de la page */
+
+body {
+  margin: 0; /* Pour prendre tout l'écran */
+}
+
+#interface {
+  display: grid;
+  height: 100vh; /* Pour prendre tout l'écran */
+  grid-template-rows: 15.5% 69% 1fr;
+}
+
+#haut,
+#bas {
+  background-color: #2d2524;
+}
+
+#centre {
+  background-color: #483b3a;
+}
+
+/* Haut avec titre du jeu */
+
+/* Déplacement logo/texte */
+#haut {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Style du titre */
+#haut h1 {
+  color: #ead6ce;
+  text-shadow: 0 0 4px #715c5b, 0 0 4px #715c5b, 0 0 4px #715c5b,
+    0 0 4px #715c5b;
+  filter: drop-shadow(0px 4px 4px black);
+  font-size: 4rem;
+}
+
+/* Centre avec fin / return_menu */
+
+.rectangle {
+  height: 100%;
+  width: 100%;
+  background-color: #2d2524;
+  border: 3px solid #ead6ce;
+}
+
+#centre {
+  display: grid;
+  /* Pour le placement de la section fin / return_menu */
+  grid-template-columns: 30% 5% 1fr 5% 30%;
+  grid-template-rows: 1fr 23.75rem 1fr 4.5rem 1fr;
+}
+
+/* PARTIE FIN */
+
+#fin_rectangle {
+  /* Placement dans le centre */
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  /* Pour le placement dans le rectangle fin */
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* Placement des images dans le rectangle fin */
+#fin_images {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: center;
+  justify-self: center;
+}
+
+#fin_images img {
+  width: 100%;
+  height: auto;
+}
+
+/* Placement du texte dans le rectangle fin */
+#fin_rectangle > h1 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* Style du texte du rectangle */
+
+#fin_rectangle > h1 {
+  color: #ead6ce;
+  text-shadow: 0 0 4px #715c5b, 0 0 4px #715c5b, 0 0 4px #715c5b,
+    0 0 4px #715c5b;
+  filter: drop-shadow(0px 4px 4px black);
+}
+
+/* PARTIE RETOUR MENU */
+
+input[type="button"] {
+  height: 100%;
+  width: 100%;
+  background-color: #ead6ce;
+  border: 3px solid #2d2524;
+  padding: 0;
+
+  font-size: 2rem;
+  color: #483b3a;
+}
+
+/* Déplacement du rectangle return_menu */
+#return_menu {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  width: 100%;
+}

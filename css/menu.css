@@ -1,0 +1,205 @@
+/* Police d'écriture */
+
+@import url("https://fonts.cdnfonts.com/css/breathe-fire");
+
+#breathe_fire {
+  font-family: "Breathe Fire", sans-serif;
+  margin: 0;
+}
+
+/* Settings de base de la page */
+
+body {
+  margin: 0; /* Pour prendre tout l'écran */
+}
+
+#interface {
+  display: grid;
+  height: 100vh; /* Pour prendre tout l'écran */
+  grid-template-rows: 15.5% 69% 1fr;
+}
+
+#haut,
+#bas {
+  background-color: #2d2524;
+}
+
+#centre {
+  background-color: #483b3a;
+}
+
+/* Haut avec titre du jeu */
+
+/* Déplacement logo/texte */
+#haut {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Style du titre */
+#haut h1 {
+  color: #ead6ce;
+  text-shadow: 0 0 4px #715c5b, 0 0 4px #715c5b, 0 0 4px #715c5b,
+    0 0 4px #715c5b;
+  filter: drop-shadow(0px 4px 4px black);
+  font-size: 4rem;
+}
+
+/* Centre avec movement, attack, inventaire / Press enter */
+
+.rectangle {
+  height: 100%;
+  width: 100%;
+  background-color: #2d2524;
+  border: 3px solid #ead6ce;
+}
+
+#centre {
+  display: grid;
+  /* Pour le placement des sections movement, attack, inventaire / Press enter */
+  grid-template-columns: 15% 25% 5% 20% 5% 15% 15%;
+  grid-template-rows: 1fr 23.75rem 1fr 1fr;
+  justify-items: center;
+}
+
+/* PARTIE MOVEMENT */
+
+#movement_rectangle {
+  /* Placement dans le centre */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  /* Pour le placement dans le rectangle movement */
+  display: grid;
+  grid-template-rows: 2.688rem 1fr 3.125rem 2.563rem 4.563rem;
+}
+
+/* Placement des images dans le rectangle movement */
+#movement_images {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#movement_images img:not(#separation) {
+  width: 40%;
+  height: auto;
+}
+
+#separation {
+  width: auto;
+  height: 8rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/* Placement du texte dans le rectangle movement */
+#movement_rectangle > h1 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* PARTIE ATTACK */
+
+#attack_rectangle {
+  /* Placement dans le centre */
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  /* Pour le placement dans le rectangle attack */
+  display: grid;
+  grid-template-rows: 2.688rem 1fr 3.125rem 2.563rem 4.563rem;
+}
+
+/* Placement des images dans le rectangle attack */
+#attack_images {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: center;
+  justify-self: center;
+}
+
+#attack_images img {
+  width: 100%;
+  height: auto;
+}
+
+/* Placement du texte dans le rectangle attack */
+#attack_rectangle > h1 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* PARTIE INVENTAIRE */
+
+#inventaire_rectangle {
+  /* Placement dans le centre */
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  /* Pour le placement dans le rectangle inventaire */
+  display: grid;
+  grid-template-rows: 2.688rem 1fr 3.125rem 2.563rem 4.563rem;
+}
+
+/* Placement des images dans le rectangle inventaire */
+#inventaire_images {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: center;
+  justify-self: center;
+}
+
+#inventaire_images img {
+  width: 100%;
+  height: auto;
+}
+
+/* Placement du texte dans le rectangle inventaire */
+#inventaire_rectangle > h1 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  align-self: center;
+  justify-self: center;
+}
+
+/* PARTIE PRESS ENTER */
+
+/* Déplacement du texte press enter */
+#press_enter {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Style du texte press enter */
+#press_enter > h1 {
+  color: #ead6ce;
+  text-shadow: 0 0 4px #2d2524, 0 0 4px #2d2524, 0 0 4px #2d2524,
+    0 0 4px #2d2524;
+  filter: drop-shadow(0px 4px 4px black);
+}
+
+/* Style du texte des rectangles */
+
+#movement_rectangle > h1,
+#attack_rectangle > h1,
+#inventaire_rectangle > h1 {
+  color: white;
+  text-shadow: 0 0 2px #715c5b, 0 0 2px #715c5b, 0 0 2px #715c5b,
+    0 0 2px #715c5b;
+  filter: drop-shadow(0px 4px 4px black);
+}

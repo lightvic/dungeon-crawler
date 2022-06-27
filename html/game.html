@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/rpg.css" />
+    <link rel="icon" href="../images/sword.png"/>
+    <title>Dungeon Crawler</title>
+  </head>
+
+  <body>
+    <div id="interface">
+      <div id="haut">
+        <a href="https://github.com/JbMig/ProjetRPG-JS">
+          <img src="../images/github.png" />
+        </a>
+
+        <h1 id="breathe_fire">Dungeon Crawler</h1>
+
+        <!-- Div invisible pour bien placer les élément au-dessus en flex-->
+        <div id="invisible"></div>
+      </div>
+
+      <div id="canvas">
+        <canvas id="plateau" width="700" height="430"></canvas>
+      </div>
+
+      <div id="bas">
+      </div>
+    </div>
+    <script src="../js/map.js"></script>
+    <script src="../js/game.js"></script>
+  </body>
+</html>

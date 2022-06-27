@@ -1,0 +1,71 @@
+/* Police d'écriture */
+
+@import url("https://fonts.cdnfonts.com/css/breathe-fire");
+
+#breathe_fire {
+  font-family: "Breathe Fire", sans-serif;
+  src: url("/Fonts/BreatheFire-65pg.ttf") format("truetype");
+  margin: 0;
+  text-align:center;
+}
+
+/* Font size dialogue */
+p {
+  color: #ead6ce;
+  font-size: 30px;
+  text-shadow: 0 0 4px #2d2524, 0 0 4px #2d2524, 0 0 4px #2d2524,
+    0 0 4px #2d2524;
+}
+
+/* Settings de base de la page */
+
+body {
+  margin: 0; /* Pour prendre tout l'écran */
+}
+
+#interface {
+  display: grid;
+  height: 100vh; /* Pour prendre tout l'écran */
+  grid-template-rows: 1fr auto 2fr;
+}
+
+#haut,
+#bas {
+  background-color: #2d2524;
+}
+
+#canvas {
+  display: flex;
+  justify-content: center;
+  background-color: #483b3a;
+}
+
+/* Haut avec titre du jeu */
+
+/* Déplacement logo/texte */
+#haut {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Style du titre */
+#haut h1 {
+  color: #ead6ce;
+  text-shadow: 0 0 4px #715c5b, 0 0 4px #715c5b, 0 0 4px #715c5b,
+    0 0 4px #715c5b;
+  filter: drop-shadow(0px 4px 4px black);
+  font-size: 4rem;
+}
+
+/* Bas de page a.k.a boite de dialogue */
+
+#bas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/dialogue.png");
+  background-size: 100%;
+}
+
+

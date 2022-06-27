@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="icon" href="./images/sword.png" />
+    <title>Dungeon Crawler</title>
+  </head>
+
+  <body>
+    <div id="interface">
+      <div id="haut">
+        <a href="https://github.com/JbMig/ProjetRPG-JS">
+          <img src="./images/github.png" />
+        </a>
+
+        <h1 id="breathe_fire">Dungeon Crawler</h1>
+
+        <!-- Div invisible pour bien placer les éléments au-dessus en flex-->
+        <div id="invisible"></div>
+      </div>
+
+      <div id="centre">
+        <div class="rectangle" id="movement_rectangle">
+          <div id="movement_images">
+            <img src="./images/ZQSD.png" />
+            <img id="separation" src="./images/separation.png" />
+            <img src="./images/Flèches.png" />
+          </div>
+          <h1 id="breathe_fire">MOVEMENT</h1>
+        </div>
+
+        <div class="rectangle" id="attack_rectangle">
+          <div id="attack_images">
+            <img src="./images/spacebar.png" />
+          </div>
+          <h1 id="breathe_fire">ACTION</h1>
+        </div>
+
+        <div class="rectangle" id="inventaire_rectangle">
+          <div id="inventaire_images">
+            <img src="./images/I.png" />
+          </div>
+          <h1 id="breathe_fire">INVENTORY</h1>
+        </div>
+
+        <div id="press_enter">
+          <h1 id="breathe_fire">- Press Enter -</h1>
+        </div>
+      </div>
+
+      <div id="bas"></div>
+    </div>
+
+    <script>
+		// Load la page indiquée sur appui touche entrée (keycode 13)
+		document.onkeydown = function (e) {
+		if (e.keyCode === 13) {
+			window.location.assign("./html/game.html");
+		}
+		};
+	</script>
+  </body>
+</html>
